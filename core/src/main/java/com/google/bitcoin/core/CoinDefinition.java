@@ -1,9 +1,7 @@
 package com.google.bitcoin.core;
 
 import java.math.BigInteger;
-import java.util.Date;
 import java.util.Map;
-import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -171,14 +169,14 @@ public class CoinDefinition {
     //checkpoints.cpp Checkpoints::mapCheckpoints
     public static void initCheckpoints(Map<Integer, Sha256Hash> checkpoints)
     {
-        checkpoints.put( 0,     new Sha256Hash("0x00000fb62685078fccaf1ee757701c436145819f105b8d638f817782f9b817e2"));
-        checkpoints.put( 1,     new Sha256Hash("0x00000edbc1a64b7da2459fb4036c894df5bd3f942393de830489a412cd05afe0"));
-        checkpoints.put( 18879, new Sha256Hash("0x000000000001e5ddb097bd66ba8562d02b013b1343c506a4b68298db97e98aec"));
-        checkpoints.put( 24307, new Sha256Hash("0x00000000000052932d94a2befa9909830ea34e524f270e7fb9a0f5974d7ad20a"));
-        checkpoints.put( 28475, new Sha256Hash("0x000000000001d58a6e84328371e9d4e4de5b623285ca85647dbff938352df470"));
-        checkpoints.put( 36067, new Sha256Hash("0x00000000000051d01893a2a5bb355340a8d6e274067172e4e9949b4f4fb5e96c"));
-        checkpoints.put( 48580, new Sha256Hash("0x0000000000000af656a26d69a8095e1c3f0e719d756a05eccc5fa62032479448"));
-        checkpoints.put( 49999, new Sha256Hash("0x000000000000179abc37df282a81e5997fc55fdb4fa9628e8d6e58dfa41ec9cc"));
+        checkpoints.put( 0,     new Sha256Hash("00000fb62685078fccaf1ee757701c436145819f105b8d638f817782f9b817e2"));
+        checkpoints.put( 1,     new Sha256Hash("00000edbc1a64b7da2459fb4036c894df5bd3f942393de830489a412cd05afe0"));
+        checkpoints.put( 18879, new Sha256Hash("000000000001e5ddb097bd66ba8562d02b013b1343c506a4b68298db97e98aec"));
+        checkpoints.put( 24307, new Sha256Hash("00000000000052932d94a2befa9909830ea34e524f270e7fb9a0f5974d7ad20a"));
+        checkpoints.put( 28475, new Sha256Hash("000000000001d58a6e84328371e9d4e4de5b623285ca85647dbff938352df470"));
+        checkpoints.put( 36067, new Sha256Hash("00000000000051d01893a2a5bb355340a8d6e274067172e4e9949b4f4fb5e96c"));
+        checkpoints.put( 48580, new Sha256Hash("0000000000000af656a26d69a8095e1c3f0e719d756a05eccc5fa62032479448"));
+        checkpoints.put( 49999, new Sha256Hash("000000000000179abc37df282a81e5997fc55fdb4fa9628e8d6e58dfa41ec9cc"));
     }
     
     //Unit Test Information

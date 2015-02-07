@@ -16,11 +16,9 @@
 
 package com.google.bitcoin.params;
 
+import com.google.bitcoin.core.CoinDefinition;
 import com.google.bitcoin.core.NetworkParameters;
 import com.google.bitcoin.core.Sha256Hash;
-import com.google.bitcoin.core.Utils;
-import com.google.bitcoin.core.CoinDefinition;
-import com.google.bitcoin.core.Block;
 
 import static com.google.common.base.Preconditions.checkState;
 
@@ -47,7 +45,7 @@ public class MainNetParams extends NetworkParameters {
         id = ID_MAINNET;
         subsidyDecreaseBlockCount = CoinDefinition.subsidyDecreaseBlockCount;
         spendableCoinbaseDepth = CoinDefinition.spendableCoinbaseDepth;
-        //genesisBlock.setMerkleRoot(new Sha256Hash("868b2fb28cb1a0b881480cc85eb207e29e6ae75cdd6d26688ed34c2d2d23c776"));
+        genesisBlock.setMerkleRoot(new Sha256Hash("8a2bd8d2205874061f46dac87f09442b4e085f19af5bed52953a7cb0164dfec6"));
         String genesisHash = genesisBlock.getHashAsString();
         checkState(genesisHash.equals(CoinDefinition.genesisHash),
                 genesisHash);
