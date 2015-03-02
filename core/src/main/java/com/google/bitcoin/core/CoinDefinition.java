@@ -16,8 +16,8 @@ public class CoinDefinition {
     public static final String coinName = "hamradiocoin";
     public static final String coinTicker = "HAM";
     public static final String coinURIScheme = "hamradiocoin";
-    public static final String cryptsyMarketId = "26"; // not yet on cryptsy
-    public static final String cryptsyMarketCurrency = "BTC";
+    //public static final String cryptsyMarketId = "26"; // not yet on cryptsy
+    public static final String cryptsyMarketCurrency = "BLEU_HAM";
     public static final String PATTERN_PRIVATE_KEY_START = "6";
     public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[Q]";
     public static final String PATTERN_PRIVATE_KEY_START_TESTNET = "9";
@@ -80,7 +80,7 @@ public class CoinDefinition {
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
     
     
-    public static final boolean supportsBloomFiltering = true; //Requires PROTOCOL_VERSION 70000 in the client
+    public static final boolean supportsBloomFiltering = false; //Requires PROTOCOL_VERSION 70000 in the client
     public static boolean supportsIrcDiscovery() {
         return PROTOCOL_VERSION <= 70000;
     }
@@ -108,14 +108,14 @@ public class CoinDefinition {
     
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-    "46.10.239.23:15537",
-    "209.188.18.188:15537",
-    "104.131.229.55:15537",
-    "108.61.10.90:15537",
-    "188.226.164.143:15537",
-    "91.121.165.120:15537",
-    "166.62.40.175:15537",
-    "192.99.13.126:15537"
+    "46.10.239.23",
+    "209.188.18.188",
+    "104.131.229.55",
+    "108.61.10.90",
+    "188.226.164.143",
+    "91.121.165.120",
+    "166.62.40.175",
+    "192.99.13.126"
     };
     
     public static int minBroadcastConnections = 1;   //0 for default; we need more peers.
