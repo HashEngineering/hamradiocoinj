@@ -15,11 +15,11 @@ public class CoinDefinition {
     
     public static final String coinName = "hamradiocoin";
     public static final String coinTicker = "HAM";
-    public static final String coinURIScheme = "hamradiocoin";
+    public static final String coinURIScheme = "bitcoin";
     public static final String cryptsyMarketId = "26"; // not yet on cryptsy
     public static final String cryptsyMarketCurrency = "BTC";
-    public static final String PATTERN_PRIVATE_KEY_START = "6";
-    public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[Q]";
+    public static final String PATTERN_PRIVATE_KEY_START = "5";
+    public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED = "[L]";
     public static final String PATTERN_PRIVATE_KEY_START_TESTNET = "9";
     public static final String PATTERN_PRIVATE_KEY_START_COMPRESSED_TESTNET = "c";
     
@@ -38,15 +38,16 @@ public class CoinDefinition {
     public static final String BLOCKEXPLORER_BLOCK_PATH = "ham/hash/";                 //blockr.io path
     public static final String BLOCKEXPLORER_BASE_URL_TEST = BLOCKEXPLORER_BASE_URL_PROD;
     
-    public static final String DONATION_ADDRESS = "DPdbL3n3Y3ypwVEvY3wABmpbjsd3AVqm5M";  //HashEngineering donation DGC address
+    public static final String DONATION_ADDRESS = "12i4dnnqgLQ7iQAUhBiKJXnxfYRJPDQHWF";  //HashEngineering donation DGC address
     
-    public static final String UNSPENT_API_URL = "http://blockexperts.com/ham/api";
+    public static final String UNSPENT_API_URL = "https://chainz.cryptoid.info/ham/api.dws?q=unspent";
     public enum UnspentAPIType {
         BitEasy,
         Blockr,
-        Abe
+        Abe,
+        Cryptoid
     };
-    public static final UnspentAPIType UnspentAPI = UnspentAPIType.Blockr;
+    public static final UnspentAPIType UnspentAPI = UnspentAPIType.Cryptoid;
     
     enum CoinHash {
         SHA256,
@@ -80,7 +81,7 @@ public class CoinDefinition {
     public static final int MAX_BLOCK_SIZE = 1 * 1000 * 1000;
     
     
-    public static final boolean supportsBloomFiltering = true; //Requires PROTOCOL_VERSION 70000 in the client
+    public static final boolean supportsBloomFiltering = false; //Requires PROTOCOL_VERSION 70000 in the client
     public static boolean supportsIrcDiscovery() {
         return PROTOCOL_VERSION <= 70000;
     }
@@ -108,14 +109,14 @@ public class CoinDefinition {
     
     //net.cpp strDNSSeed
     static public String[] dnsSeeds = new String[] {
-    "46.10.239.23:15537",
-    "209.188.18.188:15537",
-    "104.131.229.55:15537",
-    "108.61.10.90:15537",
-    "188.226.164.143:15537",
-    "91.121.165.120:15537",
-    "166.62.40.175:15537",
-    "192.99.13.126:15537"
+    "46.10.239.23",
+    "209.188.18.188",
+    "104.131.229.55",
+    "108.61.10.90",
+    "188.226.164.143",
+    "91.121.165.120",
+    "166.62.40.175",
+    "192.99.13.126"
     };
     
     public static int minBroadcastConnections = 1;   //0 for default; we need more peers.
